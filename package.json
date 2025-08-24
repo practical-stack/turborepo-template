@@ -1,6 +1,17 @@
 {
   "name": "basecn-ui",
-  "private": true,
+  "description": "shadcn/ui components reimplemented with MUI Base UI (Work in Progress)",
+  "keywords": [
+    "react",
+    "components",
+    "mui-base",
+    "headless-ui",
+    "design-system",
+    "typescript",
+    "accessibility",
+    "unstyled-components",
+    "shadcn-ui"
+  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -15,6 +26,6 @@
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   }
 }
