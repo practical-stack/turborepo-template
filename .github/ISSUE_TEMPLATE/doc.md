@@ -1,19 +1,15 @@
 ---
 name: doc
 about: Add or update project documentation
-title: "[doc]: [Description]"
+title: "[doc]:"
 labels: doc
 assignees: p-iknow
 
 ---
 
-## Summary
-
-**What documentation needs to be created/updated:**
-
 ## Requirement
 
-## Implementation
+## Implementation Plan (optional)
 
 **Documentation type:**
 
@@ -21,10 +17,10 @@ assignees: p-iknow
 
 **Files to be modified:**
 
-## Testing
+## Should be tested
 - [ ] Documentation reviewed for accuracy
 - [ ] Examples tested and working
 - [ ] Consistency with existing documentation maintained
 - [ ] References and links properly connected
 
-## Reference
+## Reference (optionla)

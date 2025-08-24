@@ -1,26 +1,20 @@
 ---
 name: config
 about: Add or update project configuration, dependencies, or tooling
-title: "[confg]: [Description]"
+title: "[confg]:"
 labels: feat-config
 assignees: p-iknow
 
 ---
 
-## Summary
-
-**What needs to be configured:**
-
 ## Requirement
 
-## Implementation
+## Implementation plan(optional)
 
 **Dependencies (if applicable):**
 
-**Configuration changes:**
 
-
-## Testing
+## Should be tested
 
 - [ ] Configuration tested locally
 - [ ] CI/CD pipeline verified (if applicable)

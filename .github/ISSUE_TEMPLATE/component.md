@@ -1,13 +1,13 @@
 ---
 name: component
 about: Implement a new basecn-ui component
-title: "[component]: [Component Name]"
+title: "[component]:"
 labels: feat-component
 assignees: p-iknow
 
 ---
 
-## Component to Implement
+## Compnents
 
 **basecn-ui Component Name:** 
 
@@ -15,15 +15,12 @@ assignees: p-iknow
 
 ** base-ui Component(s) Reference:** 
 
-## Summery 
-**Requirement:** 
-
-**Implementation:** 
+## Context (optional)
 
 **Context**
 *If the MUI Base UI interface differs from Radix UI or requires intentional API changes*
 
-## Testing 
-- [ ] Storybook stories created and tested
+## Should be Tested
+- [ ] xx
 
-## Reference
+## Reference (optional)
