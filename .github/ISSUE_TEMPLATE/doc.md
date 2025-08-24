@@ -1,7 +1,7 @@
 ---
-name: docs-issue-template
+name: doc
 about: Add or update project documentation
-title: 'docs: [Description]'
+title: "[doc]: [Description]"
 labels: doc
 assignees: p-iknow
 
@@ -24,5 +24,7 @@ assignees: p-iknow
 ## Testing
 - [ ] Documentation reviewed for accuracy
 - [ ] Examples tested and working
+- [ ] Consistency with existing documentation maintained
+- [ ] References and links properly connected
 
 ## Reference
