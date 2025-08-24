@@ -1,135 +1,65 @@
-# Turborepo starter
+# basecn-ui
 
-This Turborepo starter is maintained by the Turborepo core team.
+> shadcn/ui components reimplemented with MUI Base UI
 
-## Using this example
+🚧 **Work in Progress** - This project is currently under active development
 
-Run the following command:
+A drop-in alternative to shadcn/ui that uses MUI Base UI instead of Radix UI. Same components, same API, same developer experience - just a different foundation.
 
-```sh
-npx create-turbo@latest
-```
+## Features
 
-## What's inside?
+⚠️ **Note: Features listed below are planned - implementation is in progress**
 
-This Turborepo includes the following packages/apps:
+- 🎨 **Unstyled by default** - Full control over styling and theming
+- ♿ **Accessibility first** - Built with WAI-ARIA compliance in mind
+- 🔧 **Highly customizable** - Easy to adapt to your design requirements
+- 📦 **Copy & paste friendly** - No heavy dependencies, just copy what you need
+- 🚀 **Built on MUI Base** - Leverages the robust foundation of MUI's headless components
+- 💪 **TypeScript ready** - Full TypeScript support out of the box
+- 🎯 **Developer focused** - Simple APIs that developers love to use
 
-### Apps and Packages
+## Philosophy
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+basecn-ui provides the exact same components and API as shadcn/ui, but uses MUI Base UI as the underlying implementation instead of Radix UI. This means:
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- 🔄 **Drop-in replacement** - Same component names, props, and usage patterns
+- 🎯 **Identical developer experience** - If you know shadcn/ui, you know basecn-ui
+- 🏗️ **Different foundation** - Powered by MUI Base UI for those who prefer it
+- 📦 **Same philosophy** - Copy, paste, customize, and own your components
 
-### Utilities
+## Turborepo Monorepo Structure
 
-This Turborepo has some additional tools already setup for you:
+This project is organized as a turborepo monorepo for efficient development and build processes:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+### Development Commands
 
-### Build
+- **`pnpm dev`** - Start all apps in development mode
+- **`pnpm build`** - Build all apps and packages
+- **`pnpm lint`** - Run linting across all workspaces
+- **`pnpm check-types`** - Type-check all TypeScript code
+- **`pnpm format`** - Format code with Prettier
 
-To build all apps and packages, run the following command:
+### Prerequisites
 
-```
-cd my-turborepo
+- **Node.js** >= 18
+- **pnpm** 9.0.0 (specified as package manager)
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
+The turborepo setup ensures efficient caching, parallel execution, and proper dependency management across the entire workspace.
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
-```
+## Development Status
 
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+🔨 **Currently in development** - Components are being actively implemented. Not ready for production use.
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
+## Contributing
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
+🚫 **Not accepting contributions at this time** - We're focusing on core development and will open up for contributions once the foundation is stable.
 
-### Develop
+## License
 
-To develop all apps and packages, run the following command:
+Licensed under the [MIT license](./LICENSE.md).
 
-```
-cd my-turborepo
+## Acknowledgments
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
-```
-
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+- [shadcn](https://github.com/shadcn) for creating the original shadcn/ui components and API design
+- [base-ui](https://base-ui.com/react/overview/quick-start) for the excellent Base UI foundation
+- The React community for continuous inspiration
