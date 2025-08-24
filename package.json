@@ -1,7 +1,18 @@
 {
-  "name": "basecn-ui",
-  "private": true,
-  "scripts": {
+  "name": "@p-stack/turborepo-template",
+"description": "A modern, lightweight Turborepo template with essential open-source configurations for p-stack organization projects",
+  "keywords": [
+    "turborepo",
+    "template",
+    "monorepo",
+    "typescript",
+    "open-source",
+    "github-template",
+    "p-stack",
+    "modern-tooling",
+    "conventional-commits",
+    "repository-template"
+  ], "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -15,6 +26,6 @@
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   }
 }
