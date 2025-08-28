@@ -65,11 +65,9 @@ Analyze `git diff` between current HEAD and base branch:
 ### Human Check Section
 - Always add human verification section at the end:
 ```markdown
----
 ## Human Check 
-🤖 Generated with [Claude Code](https://claude.ai/code)
+~~🤖 Generated with [Claude Code](https://claude.ai/code)~~
 - [ ] I reviewed it 
----
 ```
 
 ## PR Creation Process
