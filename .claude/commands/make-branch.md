@@ -5,7 +5,8 @@ Generate consistent branch names from GitHub issue information.
 ## Usage
 
 ```
-/make-branch <issue-index> "<issue-title>"
+/make-branch [<type>]: <description>
+#<issue-index>
 ```
 
 ## Template
@@ -24,27 +25,32 @@ i{issue-index}-{type}/{action-description_with_underscores}
 
 ## Examples
 
-- Input: `/make-branch 15 "feat: implement Button component"`
-- Output: `i15-feat/implement_button_component`
+- Input: `/make-branch [config]: issue template, pr template, claude commend
+#5`
+- Output: `i5-config/issue-template-pr-template-claude-commend`
 
-- Input: `/make-branch 23 "fix: resolve styling issues in Dialog"`
-- Output: `i23-fix/resolve_styling_issues_in_dialog`
+- Input: `/make-branch [feat]: implement Button component
+#15`
+- Output: `i15-feat/implement-button-component`
 
-- Input: `/make-branch 8 "config: setup ESLint configuration"`
-- Output: `i8-config/setup_eslint_configuration`
+- Input: `/make-branch [fix]: resolve styling issues in Dialog
+#23`
+- Output: `i23-fix/resolve-styling-issues-in-dialog`
 
-- Input: `/make-branch 42 "docs: add component usage examples"`
-- Output: `i42-docs/add_component_usage_examples`
+- Input: `/make-branch [docs]: add component usage examples
+#42`
+- Output: `i42-docs/add-component-usage-examples`
 
 ## Implementation
 
-Parse the issue title to:
-1. Extract the type prefix (feat:, docs:, etc.)
-2. Extract the action description after the colon
-3. Convert spaces to underscores
-4. Preserve existing hyphens
-5. Remove other special characters
-6. Format as the template above
+Parse the input to:
+1. Extract the issue index from #<number>
+2. Extract the type from [<type>]
+3. Extract the description after the colon
+4. Convert spaces to hyphens
+5. Convert commas and special characters to hyphens
+6. Remove duplicate hyphens
+7. Format as i{index}-{type}/{description}
 
 ## Workflow
 
